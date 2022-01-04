@@ -54,4 +54,14 @@ class BerlinClock
         return '1';
     }
 
+    public function BerlinClock_final(int $hour, int$minute, $second):string
+    {
+        return $this->BerlinClock_refactor($second, $hour, $minute);
+    }
+
+    public function BerlinClock_refactor($second, int $hour, int $minute): string
+    {
+        return ($this->seconds($second) . " " . $this->bloc5Hour($hour) . " " . $this->simpleHour($hour) . " "
+            . $this->bloc5Minutes($minute) . " " . $this->simpleMinutes($minute));
+    }
 }
