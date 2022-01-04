@@ -172,4 +172,16 @@ class BerlinClockTest extends TestCase
         $actual= $hour->bloc5Hour(24);
         $this->assertEquals('1111', $actual);
     }
+
+    public function testSecondEven(){
+        $second = new BerlinClock();
+        $actual= $second->seconds(22);
+        $this->assertEquals('1',$actual);
+    }
+
+    public function testSecondOdd(){
+        $second = new BerlinClock();
+        $actual= $second->seconds(59);
+        $this->assertEquals('0',$actual);
+    }
 }
