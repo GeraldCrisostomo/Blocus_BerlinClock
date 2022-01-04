@@ -113,4 +113,34 @@ class BerlinClockTest extends TestCase
         $this->assertEquals('111111111111', $actual);
     }
 
+    public function testSimpleHoursC1(){
+        $hour = new BerlinClock();
+        $actual= $hour->simpleHour(0);
+        $this->assertEquals('0000', $actual);
+    }
+
+    public function testSimpleHoursC2(){
+        $hour = new BerlinClock();
+        $actual= $hour->simpleHour(1);
+        $this->assertEquals('1000', $actual);
+    }
+
+    public function testSimpleHoursC3(){
+        $hour = new BerlinClock();
+        $actual= $hour->simpleHour(7);
+        $this->assertEquals('1100', $actual);
+    }
+
+    public function testSimpleHoursC4(){
+        $hour = new BerlinClock();
+        $actual= $hour->simpleHour(18);
+        $this->assertEquals('1110', $actual);
+    }
+
+    public function testSimpleHoursC5(){
+        $hour = new BerlinClock();
+        $actual= $hour->simpleHour(24);
+        $this->assertEquals('1111', $actual);
+    }
+
 }
