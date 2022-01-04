@@ -38,7 +38,7 @@ class BerlinClockTest extends TestCase
     public function testBloc5MinutesC1(){
         $minute = new BerlinClock();
         $actual= $minute->bloc5Minutes(3);
-        $this->assertEquals('0000000000000', $actual);
+        $this->assertEquals('000000000000', $actual);
     }
 
     public function testBloc5MinutesC2(){
@@ -59,5 +59,58 @@ class BerlinClockTest extends TestCase
         $this->assertEquals('111000000000', $actual);
     }
 
+    public function testBloc5MinutesC5(){
+        $minute = new BerlinClock();
+        $actual= $minute->bloc5Minutes(20);
+        $this->assertEquals('111100000000', $actual);
+    }
+
+    public function testBloc5MinutesC6(){
+        $minute = new BerlinClock();
+        $actual= $minute->bloc5Minutes(27);
+        $this->assertEquals('111110000000', $actual);
+    }
+
+    public function testBloc5MinutesC7(){
+        $minute = new BerlinClock();
+        $actual= $minute->bloc5Minutes(32);
+        $this->assertEquals('111111000000', $actual);
+    }
+
+    public function testBloc5MinutesC8(){
+        $minute = new BerlinClock();
+        $actual= $minute->bloc5Minutes(37);
+        $this->assertEquals('111111100000', $actual);
+    }
+
+    public function testBloc5MinutesC9(){
+        $minute = new BerlinClock();
+        $actual= $minute->bloc5Minutes(42);
+        $this->assertEquals('111111110000', $actual);
+    }
+
+    public function testBloc5MinutesC10(){
+        $minute = new BerlinClock();
+        $actual= $minute->bloc5Minutes(47);
+        $this->assertEquals('111111111000', $actual);
+    }
+
+    public function testBloc5MinutesC11(){
+        $minute = new BerlinClock();
+        $actual= $minute->bloc5Minutes(53);
+        $this->assertEquals('111111111100', $actual);
+    }
+
+    public function testBloc5MinutesC12(){
+        $minute = new BerlinClock();
+        $actual= $minute->bloc5Minutes(57);
+        $this->assertEquals('111111111110', $actual);
+    }
+
+    public function testBloc5MinutesC13(){
+        $minute = new BerlinClock();
+        $actual= $minute->bloc5Minutes(60);
+        $this->assertEquals('111111111111', $actual);
+    }
 
 }
