@@ -23,5 +23,11 @@ class BerlinClockTest extends TestCase
         $this->assertEquals('1100', $actual);
     }
 
+    public function testSimpleMinutesC4(){
+        $minute = new BerlinClock();
+        $actual= $minute->simpleMinutes(8);
+        $this->assertEquals('1110', $actual);
+    }
+
 
 }
