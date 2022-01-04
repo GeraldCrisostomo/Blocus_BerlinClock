@@ -10,4 +10,10 @@ class BerlinClockTest extends TestCase
         $actual= $minute->simpleMinutes(0);
         $this->assertEquals('0000', $actual);
     }
+
+    public function testSimpleMinutesC2(){
+        $minute = new BerlinClock();
+        $actual= $minute->simpleMinutes(1);
+        $this->assertEquals('0001', $actual);
+    }
 }
