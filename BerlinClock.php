@@ -11,6 +11,7 @@ class BerlinClock
     }
 
     public function bloc5Minutes(int $minute):string{
-        return "0000000000000";
+        if($minute/5 > 1 && $minute/5 < 2 ) return "100000000000";
+        return "000000000000";
     }
 }

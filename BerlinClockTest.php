@@ -41,5 +41,11 @@ class BerlinClockTest extends TestCase
         $this->assertEquals('0000000000000', $actual);
     }
 
+    public function testBloc5MinutesC2(){
+        $minute = new BerlinClock();
+        $actual= $minute->bloc5Minutes(7);
+        $this->assertEquals('100000000000', $actual);
+    }
+
 
 }
