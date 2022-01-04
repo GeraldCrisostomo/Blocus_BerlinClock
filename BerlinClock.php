@@ -9,4 +9,8 @@ class BerlinClock
         if($minute == 4 ||$minute%5==4) return "1111";
         return "0000";
     }
+
+    public function bloc5Minutes(int $minute):string{
+        return "0000000000000";
+    }
 }
