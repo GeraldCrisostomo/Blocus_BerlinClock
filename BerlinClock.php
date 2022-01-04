@@ -37,4 +37,12 @@ class BerlinClock
         return '0000';
     }
 
+    public function bloc5Hour(int $hour){
+        if(floor($hour/5) == 1) return '1000';
+        if(floor($hour/5) == 2) return '1100';
+        if(floor($hour/5) == 3) return '1110';
+        if(floor($hour/5) == 4) return '1111';
+        return '0000';
+    }
+
 }

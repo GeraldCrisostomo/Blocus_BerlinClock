@@ -143,4 +143,33 @@ class BerlinClockTest extends TestCase
         $this->assertEquals('1111', $actual);
     }
 
+    public function testBloc5HoursC1(){
+        $hour = new BerlinClock();
+        $actual= $hour->bloc5Hour(4);
+        $this->assertEquals('0000', $actual);
+    }
+
+    public function testBloc5HoursC2(){
+        $hour = new BerlinClock();
+        $actual= $hour->bloc5Hour(5);
+        $this->assertEquals('1000', $actual);
+    }
+
+    public function testBloc5HoursC3(){
+        $hour = new BerlinClock();
+        $actual= $hour->bloc5Hour(11);
+        $this->assertEquals('1100', $actual);
+    }
+
+    public function testBloc5HoursC4(){
+        $hour = new BerlinClock();
+        $actual= $hour->bloc5Hour(17);
+        $this->assertEquals('1110', $actual);
+    }
+
+    public function testBloc5HoursC5(){
+        $hour = new BerlinClock();
+        $actual= $hour->bloc5Hour(24);
+        $this->assertEquals('1111', $actual);
+    }
 }
